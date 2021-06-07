@@ -1,0 +1,675 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* scroll down nav */
+.scrollNav {
+    background-color: black;
+    color: white;
+    z-index: 9999;
+}
+
+/* scrol btn */
+.scroll-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+}
+
+.scroll-btn i {
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 200%;
+}
+
+/* scroll hide function on scroll */
+.scroll-hide {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 30px;
+}
+
+.header nav {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0; 
+    padding: 7px 10px;
+    width: 100%; 
+  }
+  
+  /* Links inside the navbar */
+  .header nav a {
+    display: inline-block;
+    text-align: center;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: white;
+  }
+  
+.header nav .heading .logo a{
+    text-decoration: none;
+    color: black;
+}
+
+.header nav .heading .logo {
+    font-size: 25px;
+}
+
+.header nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.header nav ul li a{
+    color: tomato;
+}
+
+
+.header nav ul li::after {
+    width: 0%;
+    height: 2px;
+    content: "";
+    display: block;
+    margin: auto;
+    background-color: crimson;
+}
+
+.header nav ul li:hover::after{
+    width: 100%;
+    transition: all 1s ease;
+}
+
+nav .heading {
+    display: flex;
+    align-items: center;
+}
+
+nav .heading img{
+    height: 50px;
+    margin: 0 20px;
+    border-radius: 100%;
+    width: 50px;
+    object-fit: cover;
+}
+
+.icon {
+    display: none;
+    font-size: 20px;
+}
+
+.header {
+    background-color: #ffebcd;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+#close-btn {
+    display: none;
+}
+
+/* ---------------------------------------------- text area ----------------------------------------------------*/
+.text-area {
+    position: absolute;
+    /* padding: 0 40px; */
+    transform: translate(-50%, -50%);
+    top: 55%;
+    left: 40%;
+}
+
+.text-area p{
+    margin: 20px 0;
+}
+
+/*------------------------------------------------------- About Us starts from here -----------------------------*/
+.about {
+    background-color: rgb(233, 208, 110);
+     height: 100%;
+     width: 100%;
+     padding: 30px;
+}
+
+.about .about-con .ab-title {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+
+
+/*---------------------------------------- About us Know more section ---------------------------------------- */
+.ab-flex{
+    display: none;
+}
+
+.about .about-con .ab-column {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.about .about-con .ab-column .a-card {
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+
+
+.about .about-con .ab-column .a-card .image img {
+    width: 250px;
+    height: 270px;
+    object-fit: cover;
+}
+
+.about .about-con .ab-column .a-card .image img:hover{
+    transform: scale(1.3);
+    transition: all 0.5s ease;
+}
+
+#managment {
+    font-size: 1.5rem;
+}
+
+.about .about-con .ab-column .a-card .info {
+    width: 66%;
+    margin: auto;
+}
+
+.about .about-con .ab-column .a-card-2, .about .about-con .ab-column .a-card-4 {
+    flex-direction: row-reverse;
+}
+
+/*------------------------------------ services styling starts from here --------------------------------------- */
+.service{
+    background: url(images/padding.jpg);
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+    background-size: cover;
+}
+
+.service .ser-con .ser-title{
+    font-size: 60px;
+    font-weight: 800;
+    padding: 40px 0;
+    text-align: center;
+    color: tomato;
+}
+
+.service .ser-con .ser-title::after{
+    content: "what do we provide";
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 2px;
+    color: black;
+    font-size: 25px;
+}
+
+
+.service .ser-con .ser-container{
+    width: 90%;
+    margin: auto;
+}
+
+.service .ser-con .ser-container .ser-col{
+    display: flex;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card{
+    font-size: 20px;
+    padding: 18px 15px;
+    margin: 0 30px;
+    color: white;
+    background-color: tomato;
+    border-radius: 7px;
+}
+
+.ser-card:hover {
+    transform: translateY(-35px);
+    transition: all 1s ease;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card:hover{
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info {
+    padding: 7px;
+    text-align: center;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info p{
+    margin: 10px 0;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info a {
+    text-decoration: none;
+    display: inline-block;
+    color: tomato;
+    background-color: white;
+    border: 2px solid tomato;
+    padding: 7px 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info a:hover {
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+    border: 0.7px solid white;
+}
+
+/*-------------------------------------------------- Contact Us page styling ----------------------------------- */
+
+.contact .con-heading {
+    text-align: center;
+    margin: 60px 0;
+    font-size: 50px;
+    font-weight: 800;
+    color: tomato;
+}
+
+.contact {
+    width: 75%;
+    margin: auto;
+}
+
+.contact .reg-form input{
+    display: block;
+    width: 80%;
+    height: 20px 10px;
+    padding: 10px;
+    border: 1.5px solid tomato;
+    margin: 25px 0;
+}
+
+.contact .reg-form input:hover {
+    border: 2px solid black;
+}
+
+.contact .reg-form textarea:hover {
+    border: 2px solid black;
+}
+
+.contact .reg-form textarea{
+    display: block;
+    padding: 20px 10px;
+    width: 80%;
+    border: 1.5px solid tomato;
+    margin: 25px 0;
+}
+
+.contact .reg-form button{
+    display: block;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: tomato;
+    background-color: white;
+    border: 2px solid tomato;
+    margin-bottom: 30px;
+    transition: all 1s ease;
+}
+
+.contact .reg-form button:hover {
+    transition: all 1s ease;
+    color: white;
+    background-color: tomato;
+    border: 1px solid tomato;
+}
+
+.con-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.con-flex {
+    display: flex;
+    align-items: center;
+}
+
+
+.con-text {
+    margin: 50px 0;
+}
+
+.con-container .con-info .con-text i{
+    margin-right: 20px;
+    font-size: 25px;
+}
+
+.con-container .map iframe{
+    margin-left: 100px;
+}
+
+
+
+  /* know more section of srevices all include */
+.sub-heading {
+    text-align: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    color: cadetblue;
+    background-color: black;
+}
+
+  .sub-container {
+    width: 100%;
+    background-color: blanchedalmond;
+    height: 100%;
+    padding: 20px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.sub-column-1 {
+    background-color: tomato;
+    padding: 10px;
+    width: 20%;
+    max-width: 35%;
+    margin: 0 20px;
+    height: 130vh;
+    text-align: center;
+}
+
+.sub-column-2 {
+    width: 75%;
+    /* background-color: tomato; */
+    height: 100%;
+    padding: 20px;
+    text-align: justify;
+    margin: 0 30px;
+}
+
+.sub-container .sub-column-1 ul li {
+    list-style: none;
+    margin: 40px 0;
+}
+
+.sub-container .sub-column-1 ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+/* ------------------------------- Clients styling from here ------------------------------------------ */
+.clients {
+    background-color: rgb(214, 214, 184);
+    height: 100vh;
+    width: 100%;
+
+}
+
+.clients .cl-content .cl-heading {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 800;
+    padding: 40px 0;
+}
+
+.clients .cl-content .cl-heading h1::after {
+    display: block;
+    content: "company whom we have worked with";
+    height: 2px;
+    width: 100%;
+    font-size: 19px;
+}
+
+.cl .cl-content .row-1 {
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.row-1 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    /* border-radius: 100%; */
+    /* border: 1px solid white; */
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 10px 25px;
+}
+
+.row-1 img:hover {
+    transform: translateY(-15px);
+    transition: all 1s ease;
+}
+
+
+/* media query starts form here */
+@media(max-width: 900px){
+
+    .icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* show class for slide down menu */
+    ul.show{
+        left: 0;
+        transition: all 1s ease;
+        z-index: -2;
+    }
+
+    #close-btn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: black;
+        width: 80%;
+        height: 100vh;
+        transition: all 0.5 s ease;
+        z-index: -2;
+    }
+
+    .header nav .heading .logo {
+        font-size: 15px;
+    }
+
+    .header nav ul li {
+        display: block;
+        text-align: center;
+        margin: 45px 0;
+    }
+
+    .header nav ul li i {
+        text-align: center;
+        display: block;
+    }
+
+    .text-area {
+        /* text-align: center; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        margin: auto;
+    }
+
+/*---------------------------------- Media query About us Know more section ----------------------------------- */
+.about .about-con .ab-column {
+    width: 100%;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+.about .about-con .ab-column .a-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 0;
+}
+
+.about .about-con .ab-column .a-card .image img{
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+
+
+.about .about-con .ab-column .a-card .image {
+    margin: 20px 0;
+}
+
+.about .about-con .ab-column .a-card .image img:hover{
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+
+.about .about-con .ab-column .a-card .info {
+    width: 95%;
+    margin: auto;
+    text-align: justify;
+}
+
+.about .about-con .ab-column .a-card .info h1{
+    text-align: left;
+    margin: 40px 0;
+}
+
+.about .about-con .ab-column .a-card .info p{
+    margin: 20px 0;
+}
+
+.ab-flex{
+    display: block;
+    width: 100%;
+    background-color: white;
+    border: 1px solid white;
+}
+
+/*---------------------------------- Media query Services ----------------------------------- */
+.service .ser-con .ser-container{
+    width: 95%;
+    margin: auto;
+}
+
+.service .ser-con .ser-container .ser-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card{
+    font-size: 20px;
+    padding: 18px 15px;
+    margin: 50px 0;
+    color: white;
+    background-color: tomato;
+    border-radius: 7px;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card:hover{
+    box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info {
+    padding: 7px;
+    text-align: center;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info p{
+    margin: 10px 0;
+}
+
+.service .ser-con .ser-container .ser-col .ser-card .info a{
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 7px 10px;
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    border: 2px solid black;
+}
+
+/*----------------------------- Conatct Page starts from here ----------------------------------------------------*/
+
+.contact .reg-form {
+    width: 90%;
+    margin: auto;
+}
+
+.contact .reg-form input{
+    display: block;
+    width: 95%;
+    height: 20px;
+    padding: 20px;
+    border: 1.5px solid tomato;
+    margin: 15px 0;
+}
+
+.contact .reg-form textarea{
+    display: block;
+    width: 95%;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1.5px solid tomato;
+}
+
+.contact .reg-form button{
+    display: block;
+    padding: 5px 15px;
+    font-size: 18px;
+    color: tomato;
+    background-color: white;
+    border: 2px solid tomato;
+    margin: 20px 0;
+}
+         
+.con-container {
+    display: block;
+}
+
+.con-container .map iframe {
+    width: 100%;
+}
+
+
+}
+
+
+
+@media(max-width: 300px) {
+    .header nav .heading .logo {
+        font-size: 10px;
+        padding: 0;
+    }
+}
